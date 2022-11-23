@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ZeFlix/static/css/main.229b7a3b.css",
+    "main.js": "/ZeFlix/static/js/main.58159a92.js",
+    "static/js/787.7efd31bd.chunk.js": "/ZeFlix/static/js/787.7efd31bd.chunk.js",
+    "index.html": "/ZeFlix/index.html",
+    "main.229b7a3b.css.map": "/ZeFlix/static/css/main.229b7a3b.css.map",
+    "main.58159a92.js.map": "/ZeFlix/static/js/main.58159a92.js.map",
+    "787.7efd31bd.chunk.js.map": "/ZeFlix/static/js/787.7efd31bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.229b7a3b.css",
+    "static/js/main.58159a92.js"
+  ]
+}
