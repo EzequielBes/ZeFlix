@@ -1,5 +1,10 @@
 import * as C from "./styled";
-export function Header({ black }: any) {
+
+type isBlackprop = {
+  black: boolean
+}
+
+export function Header({ black }:isBlackprop) {
   return (
     <C.Container>
       <header className={black ? 'black' : ''}>

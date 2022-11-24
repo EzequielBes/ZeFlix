@@ -1,5 +1,5 @@
-const API_KEY = 'f265a0718a4c852c2a96012556991057';
-const API_BASE = 'https://api.themoviedb.org/3';
+const API_KEY:string = 'f265a0718a4c852c2a96012556991057';
+const API_BASE:string = 'https://api.themoviedb.org/3';
 
 
 {/* 
@@ -13,7 +13,12 @@ const API_BASE = 'https://api.themoviedb.org/3';
 
 */}
 
-const basicFetch = async (endpoint:any) => {
+interface Endprops {
+  
+
+}
+
+const basicFetch = async (endpoint:Endprops) => {
   const req = await fetch(`${API_BASE}${endpoint}`);
   const json = await req.json();
   return json;

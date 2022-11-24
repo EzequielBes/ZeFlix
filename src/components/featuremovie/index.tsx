@@ -1,13 +1,14 @@
+import { HomeListProps } from "../../types/HomeList";
 import * as C from "./style";
 
-export function FeatureMovie({ item }: any) {
+export function FeatureMovie({ items }: HomeListProps) {
 
-  let firstDate = new Date(item.first_air_date);
+  let firstDate = new Date(items.first_air_date);
   let genres = [];
-  for(let i in item.genres) {
-    genres.push(item.genres[i].name)
+  for(let i in items.genres) {
+    genres.push(items.genres[i].name)
   }
-  let description = item.overview;
+  let description = items.overview;
   if(description.length > 200) {
     description = description.substring(0, 150) + '...'
   }
@@ -18,23 +19,23 @@ export function FeatureMovie({ item }: any) {
       style={{
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundImage: `url(https://image.tmdb.org/t/p/original${item.backdrop_path})`,
+        backgroundImage: `url(https://image.tmdb.org/t/p/original${items.backdrop_path})`,
       }}
     >
       <C.FeaturedVertical>
         <C.FeaturedHorizontal>
-          <C.FeaturedName>{item.original_name}</C.FeaturedName>
+          <C.FeaturedName>{items.original_name}</C.FeaturedName>
           <C.FeaturedInfo>
-            <C.Points>{item.vote_average} Pontos</C.Points>
+            <C.Points>{items.vote_average} Pontos</C.Points>
             <C.Year>{firstDate.getFullYear()}</C.Year>
             <C.Seasons>
-              {item.number_of_seasons} temporada
-              {item.number_of_seasons !== 1 ? "s" : ""}
+              {items.number_of_seasons} temporada
+              {items.number_of_seasons !== 1 ? "s" : ""}
             </C.Seasons>
           </C.FeaturedInfo>
           <C.FeaturedDesc>{description}</C.FeaturedDesc>
           <C.Buttons>
-            <a href={`/watch/${item.id}`} className='watchButton'>Assitir</a>
+            <a href={`/watch/${items.id}`} className='watchButton'>Assitir</a>
             <a href="" className='listButton'>+ Minha lista</a>
           </C.Buttons>
           <C.FeaturedGenre><strong>Gêneros: </strong>{genres.join(',')}</C.FeaturedGenre>

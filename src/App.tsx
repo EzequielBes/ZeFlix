@@ -1,15 +1,15 @@
 import Tmdb from "./Tmdb";
 import { useEffect, useState } from "react";
 import { MovieRow } from "./components/movieRow";
-import { movieListProps } from "./type";
 import { FeatureMovie } from "./components/featuremovie";
 import "./app.css";
 import { Header } from "./components/header";
+import { HomeListProps } from "./types/HomeList";
 
 export default function App() {
-  const [movieList, setMovieList] = useState<any[]>([]);
+  const [movieList, setMovieList] = useState<HomeListProps[]>([]);
   const [featureData, setFeatureData] = useState<any>(null);
-  const [blackHeader, setBlackHeader] = useState(false)
+  const [blackHeader, setBlackHeader] = useState<boolean>(false)
 
   useEffect(() => {
     const loadAll = async () => {
@@ -45,7 +45,7 @@ export default function App() {
     <div>
       <Header black={blackHeader}/>
 
-      {featureData && <FeatureMovie item={featureData} />}
+      {featureData && <FeatureMovie items={featureData} />}
 
       <section className="lists">
         {movieList.map((item, index) => (

@@ -1,8 +1,11 @@
-import { movieListProps } from "../../type";
 import * as C from "./styled";
 import { NavigateBefore, NavigateNext } from "@material-ui/icons";
+import {HomeListProps} from '../../types/HomeList'
 import {useState} from 'react'
-export function MovieRow({ title, items }: any) {
+
+
+
+export function MovieRow({ title, items }: HomeListProps) {
 
   const [scrollx,setScrollx] = useState(-500)
 
