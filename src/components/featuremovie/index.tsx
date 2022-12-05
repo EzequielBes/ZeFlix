@@ -35,7 +35,7 @@ export function FeatureMovie({ items }: HomeListProps) {
           </C.FeaturedInfo>
           <C.FeaturedDesc>{description}</C.FeaturedDesc>
           <C.Buttons>
-            <a href={`/watch/${items.id}/${items.title}`} className='watchButton'>Assitir</a>
+            <a href={`/Filmes/${items.id}`} className='watchButton'>Assitir</a>
             <a href="" className='listButton'>+ Minha lista</a>
           </C.Buttons>
           <C.FeaturedGenre><strong>Gêneros: </strong>{genres.join(',')}</C.FeaturedGenre>

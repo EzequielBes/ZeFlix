@@ -91,7 +91,11 @@ export function Movies() {
           </div>
         </div>
       </div>
-      
+      {filme.length <= 0 && 
+        <div className="loading">
+            <img src="https://media.tenor.com/Rfyx9OkRI38AAAAC/netflix-netflix-startup.gif" alt="carregando"/>
+        </div>
+      }
     </C.Container>
   )
   
