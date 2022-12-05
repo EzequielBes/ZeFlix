@@ -28,6 +28,24 @@ export const Container = styled.div`
   }
   .header--user {
     height: 35px;
+    display: flex;
+    
+
+    a{
+      font-style: none;
+      text-decoration: none;
+      display: flex;
+      gap: 10px;
+      
+    }
+    span {
+      font-style: none;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: white;
+      
+    }
   }
   .header--user img {
     height: 100%;

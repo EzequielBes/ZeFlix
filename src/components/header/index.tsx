@@ -1,10 +1,15 @@
+import { useNameContextHook } from "../../context/movieContext";
 import * as C from "./styled";
+
 
 type isBlackprop = {
   black: boolean
 }
 
 export function Header({ black }:isBlackprop) {
+  
+const {name,setName} = useNameContextHook()
+
   return (
     <C.Container>
       <header className={black ? 'black' : ''}>
@@ -14,7 +19,9 @@ export function Header({ black }:isBlackprop) {
           </a>
         </div>
         <div className="header--user">
+          
           <a href="/">
+            <span>{name?.title}</span>
             <img
               src="https://imgs.search.brave.com/Dbbjf0dZeKoOAk8XQf94C2b0LCrcx9GLoXPVOLJ7EYA/rs:fit:320:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5u/aHd4Y1dxeFI5eWt2/TENSWnNHSkdBQUFB/QSZwaWQ9QXBp"
               alt="usuario"

@@ -81,11 +81,25 @@ export default {
 
         case 'tv':
           info = await basicFetch(`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`)
-        break;  
+        break; 
+        
         
       }
     }
 
     return info;
+  },
+  getMovie: async (id:any,type:any) => {
+    
+    if(type === 'tv') {
+      const req = await basicFetch(`/tv/${id}?language=pt-BR&api_key=${API_KEY}`)
+      return req
+    }else if(type === 'movie'){
+      const req = await basicFetch(`/movie/${id}?language=pt-BR&api_key=${API_KEY}`)
+      return req
+    }
+     
+     
+    
   }
 }
