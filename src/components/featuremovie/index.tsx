@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { HomeListProps } from "../../types/HomeList";
 import * as C from "./style";
 
@@ -35,7 +36,7 @@ export function FeatureMovie({ items }: HomeListProps) {
           </C.FeaturedInfo>
           <C.FeaturedDesc>{description}</C.FeaturedDesc>
           <C.Buttons>
-            <a href={`/Filmes/${items.id}`} className='watchButton'>Assitir</a>
+            <Link to={`/Filmes/${items.id}`}><a className='watchButton'>Assitir</a></Link>
             <a href="" className='listButton'>+ Minha lista</a>
           </C.Buttons>
           <C.FeaturedGenre><strong>Gêneros: </strong>{genres.join(',')}</C.FeaturedGenre>
