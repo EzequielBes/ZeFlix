@@ -19,6 +19,7 @@ export function InitialLogin() {
         backgroundImage:
           "url(https://1.bp.blogspot.com/-GjKJGwrzoJc/YPgn-T_sUsI/AAAAAAAAasg/dlyt5q9lnyET10yhD9jcEdzZiuWGjZAjQCLcBGAsYHQ/s1170/netflix-servico-distribuicao-jogos-mobile.jpg)",
         opacity: 0.9,
+        backgroundSize: 'cover'
       }}
     >
       <div className="formdata">

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 
   
-
+  
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -22,6 +22,11 @@ export const Container = styled.div`
     font-size: 1.2rem;
     font-weight: 500;
     opacity: 0.9;
+
+    @media(max-width: 750px){
+      width: 80vw;
+      height: 50vh;
+    }
     
     form {
       display: flex;
