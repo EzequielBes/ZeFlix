@@ -4,6 +4,7 @@ export default function Filmes(){
 
   return(
     <>
+    <title>Zeflix Filmes</title>
       <Movies/>
     </>
     

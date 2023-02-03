@@ -5,6 +5,7 @@ export default function Login() {
 
   return(
     <>
+    <title>Zeflix login</title>
       <InitialLogin/>
     </>
   )

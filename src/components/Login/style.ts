@@ -11,9 +11,9 @@ export const Container = styled.div`
   
 
   .formdata {
-    width: 300px;
-    height: 300px;
-    background-color: #778899;
+    width: 25vw;
+    height: 50vh;
+    background-color: #4E4E4E;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -42,12 +42,14 @@ export const Container = styled.div`
         height: 2rem;
         outline: 0;
         padding: 5px;
-        font-size: 17px;
+        font-size: 17px;  
         font-weight: 700;
         display: flex;
         text-align: center;
         opacity: 1;
-       
+        margin-top: 10px;
+        background: #37363F;
+        color: white
 
         
         }
@@ -56,10 +58,11 @@ export const Container = styled.div`
           height: 2rem;
           outline: 0;
           border: 0;
-          background-color: 	#FF69B4;
+          background-color: 	#DE3535;
           border-radius: 0.25rem;
           cursor: pointer;
           transition: all ease 0.2s;
+          color: white;
 
           &:hover {
             filter: brightness(0.9);

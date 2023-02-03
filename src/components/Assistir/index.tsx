@@ -12,7 +12,7 @@ export function Movies() {
   
 
   const params = useParams()
-  console.log(params)
+  
 
   useEffect(()=>{
     if(params.id){
@@ -56,12 +56,17 @@ export function Movies() {
     }
   }
 
-  let genres = []
-  for(let i in filme.genres){
-    genres.push(filme.genres[i].name)
-  }
+  let genres:string[] = []
+  
 
-  console.log(filme)
+  for(let i in filme.genres){
+    let genre = filme.genres[i].name
+    
+    genres.push(genre)
+     
+  }
+  
+  
 
   return(
     <C.Container style={{
@@ -84,7 +89,7 @@ export function Movies() {
                 {filme.overview}
               </span>
               <span className="genres">
-                {genres}
+                {genres.join(", ")}
               </span>
               <button>Assistir <FaPlay/> </button>
             </div>

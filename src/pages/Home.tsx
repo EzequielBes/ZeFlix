@@ -44,6 +44,7 @@ export default function App() {
 
   return (
     <div>
+      <title>ZeFlix</title>
       <Header black={blackHeader}/>
 
       {featureData && <FeatureMovie items={featureData} />}
